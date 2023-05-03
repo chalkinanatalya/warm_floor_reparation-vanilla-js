@@ -19,7 +19,6 @@
 .hero__slider-block {
     position: absolute;
     left: calc(var(--width-block) + var(--gap) / 2);
-    /* flex: 0 0 var(--width-block); */
     width: calc(((var(--width-block) + var(--gap)) *2) - var(--gap));
     height: 100%;
 }
@@ -101,18 +100,35 @@
 
     .hero__title {
         margin-bottom: 16px;
+        max-width: 410px;
     }
 
     .hero__description {
         margin-bottom: 50px;
+        max-width: 410px;
+        font-size: 14px;
     }
 
     .hero__slider-block {
         position: static;
         height: 280px;
     }
+
+    .hero__arrow {
+        left: auto;
+        right: var(--padding);
+        transform: none;
+    }
 }
 
 @media (max-width: 560px) {
+    .hero__description {
+        margin-bottom: 24px;
+        font-size: 12px;
+    }
 
+    .hero__slider-block {
+        max-width: var(--width-slide);
+        margin: 0 auto;
+    }
 }
